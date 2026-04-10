@@ -1,0 +1,14 @@
+# Build
+build/
+
+# Oggetti e binari
+*.o
+*.out
+
+# Editor
+*~
+*.swp
+.vscode/
+
+# Log
+*.log

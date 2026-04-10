@@ -32,11 +32,14 @@ c-journey/
 
 ## ⚙️ Build & Run
 
-Each program can be compiled with `gcc`:
-```bash
-gcc main.c -o main
-./main
-```
+### Build
+make
+
+### Run
+./build/bin/app
+
+### Clean
+make clean
 
 ## 🗒️ Notes
 

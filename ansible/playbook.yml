@@ -1,0 +1,14 @@
+- name: Build C project
+  hosts: local
+  become: false
+
+  tasks:
+    - name: Install build dependencies
+      apt:
+        name:
+          - build-essential
+        state: present
+        update_cache: yes
+
+    - name: Build project
+      command: make
