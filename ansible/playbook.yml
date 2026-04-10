@@ -1,15 +1,29 @@
-- name: Build C project
+- name: Build C project in monorepo
   hosts: local
   become: false
 
+  vars:
+    project_path: projects/hello-world
+
   tasks:
-    - name: Install build dependencies
+    - name: Install dependencies
       become: true
       apt:
-        name:
-          - build-essential
+        name: build-essential
         state: present
         update_cache: yes
 
     - name: Build project
       command: make
+      args:
+        chdir: "{{ playbook_dir }}/../{{ project_path }}"
+
+    - name: Run binary
+      command: ./build/bin/app
+      args:
+        chdir: "{{ playbook_dir }}/../{{ project_path }}"
+      register: output
+
+    - name: Show output
+      debug:
+        var: output.stdout

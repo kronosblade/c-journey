@@ -1,14 +1,18 @@
-# Build
-build/
+# Build outputs
+**/build/
+**/bin/
+**/obj/
 
-# Oggetti e binari
+# Object files
 *.o
 *.out
 
-# Editor
-*~
-*.swp
+# IDE
 .vscode/
 
-# Log
+# logs
 *.log
+
+# temp
+*~
+*.swp

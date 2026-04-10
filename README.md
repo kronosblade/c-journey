@@ -7,17 +7,8 @@ A hands-on learning project where I explore the C programming language step by s
 Build a solid understanding of C fundamentals through practice, starting from the basics and progressively tackling more complex concepts.
 
 ## 📂 Structure
-
-Each program lives in its own directory with a dedicated README explaining what it does and the concepts it covers.
-
-c-journey/
-├── 01-hello-world/
-│   ├── main.c
-│   └── README.md
-├── 02-variables/
-│   ├── main.c
-│   └── README.md
-└── ...
+- projects/hello-world
+- projects/calculator (future)
 
 
 ## 🧠 Topics Covered
@@ -32,14 +23,11 @@ c-journey/
 
 ## ⚙️ Build & Run
 
-### Build
+cd projects/hello-world
 make
 
-### Run
-./build/bin/app
-
-### Clean
-make clean
+## CI
+Automated with GitHub Actions + Ansible
 
 ## 🗒️ Notes
 
