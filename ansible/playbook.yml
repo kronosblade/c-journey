@@ -1,9 +1,9 @@
-- name: Build C project in monorepo
+- name: Build generic C project
   hosts: local
   become: false
 
   vars:
-    project_path: projects/hello-world
+    project_path: ""
 
   tasks:
     - name: Install dependencies
@@ -17,13 +17,3 @@
       command: make
       args:
         chdir: "{{ playbook_dir }}/../{{ project_path }}"
-
-    - name: Run binary
-      command: ./build/bin/app
-      args:
-        chdir: "{{ playbook_dir }}/../{{ project_path }}"
-      register: output
-
-    - name: Show output
-      debug:
-        var: output.stdout
