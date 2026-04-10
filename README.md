@@ -1,3 +1,5 @@
+![CI](https://github.com/kronosblade/c-journey/actions/workflows/ci.yml/badge.svg)
+
 # 🔧 c-journey
 
 A hands-on learning project where I explore the C programming language step by step writing small, focused programs and documenting how they work.
