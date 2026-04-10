@@ -4,6 +4,7 @@
 
   tasks:
     - name: Install build dependencies
+      become: true
       apt:
         name:
           - build-essential
